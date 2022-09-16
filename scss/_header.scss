@@ -1,0 +1,115 @@
+.header {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__list {
+        ul {
+            display: flex;
+            li {
+                margin-right: 60px;
+                color: rgba(0, 0, 0, 0.9);
+                a {
+                    transition: color 0.2s;
+                }
+                a:hover {
+                    color: $green;
+                }
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__btn {
+        display: flex;
+        background: #7E59BF;
+        border-radius: 15px;
+        width: 147px;
+        height: 39px;
+        position: relative;
+        span {
+            font-weight: 500;
+            font-size: 15px;
+            color: #F4F5F5;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+        }
+        transition: all 0.2s;
+        &:hover {
+            background: #a586da;
+        }
+    }
+    &__hamburger {
+        display: none;
+        position: relative;
+        label {
+            width: 16px;
+            height: 16px;
+            background: url('/img/charm_menu-hamburger.svg') no-repeat;
+        }
+        input{
+            opacity: 0;     
+        }
+        input:checked + label{
+            background: url('/img/ci_close-big.svg') no-repeat;
+        }
+        input:checked + label + .header__menu-list{
+            display: flex;
+        }
+
+    }
+    &__menu-list {
+        display: none;
+        position: absolute;
+        top: 54px;
+        right: -15px;
+        z-index: 1;
+        ul {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            padding: 10px;
+            li {
+                margin-bottom: 20px;
+            }
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        &__list {
+            ul {
+                li {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        &__btn {
+            display: none;
+        }
+        &__list {
+            display: none;
+        }
+        &__hamburger {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+

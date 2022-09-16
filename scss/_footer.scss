@@ -1,0 +1,38 @@
+.footer {
+    background-color: $purple;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    &__row {
+        align-items: center;
+        display: flex;
+        justify-content:space-between;
+    }
+    &__tagline {
+        display: flex;
+        img {
+            margin-right: 30px;   
+        }
+    }
+    &__text {
+        padding-top: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@media (max-width:500px) {
+    .footer {
+        &__row {
+            align-items: start;
+            flex-direction: column;
+        }
+        &__tagline {
+            display: flex;
+            img {
+                margin-right: 16px;   
+            }
+        }
+    }
+}

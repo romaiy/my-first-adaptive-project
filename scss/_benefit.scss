@@ -1,0 +1,136 @@
+.benefit {
+    padding-top: 90px;
+    &__heading {
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+        color: #000000;
+        margin-bottom: 60px;
+    }
+    &__row {
+        display: flex;
+        
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__block {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        width: 570px;
+        height: 256px;
+        background: #F8F8F8;
+        border-radius: 40px;
+        padding: 60px;
+        .gif{
+            width: 80px;
+            height: 80px;
+        }
+        .one {
+            background:url('/img/benefit/gif-1.svg') no-repeat;
+        }
+        .two {
+            background:url('/img/benefit/gif-2.svg') no-repeat;
+        }
+        .three {
+            background:url('/img/benefit/gif-3.svg') no-repeat;
+        }
+        .four {
+            background:url('/img/benefit/gif-4.svg') no-repeat;
+        }
+        a.gif img {
+            visibility:hidden;
+        }
+        a:hover {
+            cursor:default;
+        }
+    }
+    &__block:hover .gif img {
+        visibility:visible;
+    }
+    &__block:hover a.gif{
+        background:none;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        color: rgba(0, 0, 0, 0.9);
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.second {
+    margin-right: 0;
+    background-color: white;
+}
+
+.trith {
+    margin-bottom: 0;
+    background-color: white;
+}
+
+.fourth {
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1220px) {
+    .benefit {
+        &__list {
+            justify-content: center;
+        }
+        &__block {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .benefit {
+        padding-top: 56px;
+        &__heading {
+            font-size: 24px;
+            line-height: 120%;
+            text-align: start;
+            width: 241px;
+            margin-bottom: 16px;
+        }
+        &__block {
+            width: 339px;
+            height: 182px;
+            padding: 32px 24px 32px 32px;
+            margin-bottom: 16px;
+        }
+        &__block:last-child {
+            margin-bottom: 0;
+        }
+        &__name {
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 16px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 130%;
+        }
+        .gif {
+            width: 64px;
+            height: 64px;
+        }
+        .one, .two, .three, .four {
+            background-size: 64px;
+        }
+    }
+}
